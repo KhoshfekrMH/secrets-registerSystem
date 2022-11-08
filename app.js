@@ -5,7 +5,7 @@ const ejs = require('ejs');
 const mongoose = require('mongoose');
 const encrypt = require('mongoose-encryption');
 
-mongoose.connect("mongodb+srv://testUser:Nipo1380143@cluster0.cjnzpcu.mongodb.net/userDB");
+mongoose.connect(process.env.MONGODB_URL);
 
 const userSchema = new mongoose.Schema ({
     email: String,
